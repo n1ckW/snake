@@ -1,8 +1,5 @@
 package io;
 
-import java.awt.event.WindowEvent;
-import java.awt.event.WindowListener;
-
 import javax.swing.JFrame;
 
 import core.Grid;
@@ -22,6 +19,7 @@ public class MainWindow extends JFrame{
 		setSize(1024,768);
 		setTitle("Snake!");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		//setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
 		setLocationRelativeTo(null);
 		
 		add(canvas);

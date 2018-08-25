@@ -15,10 +15,8 @@ public class GameCanvas extends Canvas {
 	
 	@Override
 	public void paint(Graphics g) {
-		final int w = grid.width;		
-		for (int x = 0; x < w; x++) {			
-			final int h = grid.height;			
-			for (int y=0; y < h; y++) {				
+		for (int x = 0; x < grid.width; x++) {			
+			for (int y=0; y < grid.height; y++) {				
 				g.setColor(grid.getTile(x, y).color);
 				g.fillRect(25 + 25*x, 25 + 25*y, 25, 25);
 			}

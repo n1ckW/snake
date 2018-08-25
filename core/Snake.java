@@ -15,9 +15,9 @@ public class Snake {
 
 	public synchronized void tick(boolean eating) {		
 		int tarX = snakeHead.x + headDir.xMove;
-		int tarY = snakeHead.y + headDir.yMove;			
-		SnakeBodyBlock newhead = new SnakeBodyBlock(tarX, tarY);
+		int tarY = snakeHead.y + headDir.yMove;		
 		
+		SnakeBodyBlock newhead = new SnakeBodyBlock(tarX, tarY);
 		newhead.setNext(snakeHead);
 		snakeHead.setPrev(newhead);
 		snakeHead = newhead;

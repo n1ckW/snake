@@ -17,7 +17,7 @@ public class Grid {
 		}
 	}		
 	
-	public void setTile(int x, int y, Tile t) {
+	public void setTile(int x, int y, Tile t) {		
 		grid[x][y] = t;
 	}	
 	
