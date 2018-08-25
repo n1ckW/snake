@@ -11,15 +11,18 @@ public class MainWindow extends JFrame{
 	private InputManager im;	
 	
 	public MainWindow(Grid g, Snake s) {
-		//this.addWindowListener(new WindowCloser());
+		this.addWindowListener(new WindowCloser());
 		
 		canvas = new GameCanvas(g);
 		im = new InputManager(s);
 		
 		setSize(1024,768);
 		setTitle("Snake!");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		//setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		
+		//setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
+		//setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+		
 		setLocationRelativeTo(null);
 		
 		add(canvas);

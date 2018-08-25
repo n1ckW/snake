@@ -21,6 +21,8 @@ public class Snake {
 		newhead.setNext(snakeHead);
 		snakeHead.setPrev(newhead);
 		snakeHead = newhead;
+		prevHeadDir = headDir;
+		setHeadDirection(nextDir);
 		
 		grid.setTile(tarX, tarY, Tile.SNAKE);
 		
@@ -29,9 +31,6 @@ public class Snake {
 			grid.setTile(tail.x, tail.y, Tile.EMPTY);
 			tail.getPrev().setNext(null);
 		}
-		
-		prevHeadDir = headDir;
-		setHeadDirection(nextDir);
 	}	
 	
 	public SnakeBodyBlock getHead() {

@@ -15,10 +15,10 @@ public enum Direction {
 	
 	public Direction getOpposite() {
 	switch (this) {
-		case UP: return Direction.DOWN;
-		case DOWN: return Direction.UP;
-		case LEFT: return Direction.RIGHT;
-		case RIGHT: return Direction.LEFT;
+		case UP: return DOWN;
+		case DOWN: return UP;
+		case LEFT: return RIGHT;
+		case RIGHT: return LEFT;
 		}
 	return null;
 	}

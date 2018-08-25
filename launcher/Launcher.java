@@ -13,6 +13,7 @@ public class Launcher {
 	static boolean shutdown_activated = false;
 	
 	public static void main(String[] args) throws InterruptedException {
+		
 		Thread shutdownHookTest = new Thread() {
 			@Override
 			public void run() {
@@ -54,7 +55,7 @@ public class Launcher {
 					Thread.sleep(ticktime - tDiff);				
 				}
 			}
-		}			
+		}
 		terminate();
 	}
 

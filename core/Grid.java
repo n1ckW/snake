@@ -22,9 +22,12 @@ public class Grid {
 	}	
 	
 	public Tile getTile(int x, int y) {
-		if (x < 0 || x >= width || y < 0 || y >= height) {
+		if (x < 0 || x >= width || y < 0 || y >= height) 
 			return Tile.BLOCK;
-		}
-		else return grid[x][y];
+		else 
+			if (grid[x][y] == null) 
+				return Tile.EMPTY;
+			else 
+				return grid[x][y];
 	}	
 }

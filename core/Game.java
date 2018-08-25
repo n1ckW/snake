@@ -22,10 +22,8 @@ public class Game {
 	};	
 
 	public void tick() {
-		Direction dir = snake.getHeadDirection();
-		int tarX = snake.getHead().x + dir.xMove;
-		int tarY = snake.getHead().y + dir.yMove;		
-		Tile tar = grid.getTile(tarX, tarY);
+		Direction dir = snake.getHeadDirection();	
+		Tile tar = grid.getTile(snake.getHead().x + dir.xMove, snake.getHead().y + dir.yMove);
 		
 		if (tar.solid) {
 			System.out.println("invalid move");
