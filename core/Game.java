@@ -31,7 +31,8 @@ public class Game {
 		} else {
 			boolean eating = tar.equals(Tile.FOOD);
 			snake.tick(eating);
-			if (eating) spawnFood();
+			if (eating) 
+				spawnFood();
 		}
 	}		
 	

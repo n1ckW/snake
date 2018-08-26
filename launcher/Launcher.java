@@ -29,15 +29,20 @@ public class Launcher {
 		window = new MainWindow(game.getGrid(), game.getSnake());		
 		
 		Runnable render = new Runnable() {
-			private long lastFrameTime = System.currentTimeMillis();
+			private long lastFrameTime = System.currentTimeMillis(), milCounter;
+			private short frameCounter = 0;
 			@Override
 			public void run() {
-				long beginning = System.currentTimeMillis();
 				window.update();
-				long end = System.currentTimeMillis();
-				System.out.println("time since last frame: " + (end - lastFrameTime) + " ms");
-				System.out.println("frame rendering time: " + (end - beginning) + " ms");
-				lastFrameTime = end;				
+				milCounter += (System.currentTimeMillis() - lastFrameTime);
+				lastFrameTime = System.currentTimeMillis();
+				frameCounter++;
+				
+				if (milCounter >= 1000) {
+					System.out.println(frameCounter + " FPS");
+					frameCounter = 0;
+					milCounter = 0;
+				}
 			}
 		};
 		executor = Executors.newSingleThreadScheduledExecutor();

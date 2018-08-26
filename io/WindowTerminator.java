@@ -5,7 +5,7 @@ import java.awt.event.WindowListener;
 
 import launcher.Launcher;
 
-public class WindowCloser implements WindowListener {
+public class WindowTerminator implements WindowListener {
 
 	@Override
 	public void windowOpened(WindowEvent e) {}
