@@ -17,7 +17,7 @@ public class Launcher {
 		Thread shutdownHookTest = new Thread() {
 			@Override
 			public void run() {
-				System.out.println("shutdown hook output");
+				System.out.println("shutdown hookd output");
 			}
 		};
 		Runtime.getRuntime().addShutdownHook(shutdownHookTest);

@@ -37,9 +37,9 @@ public class Game {
 	}		
 	
 /**
- * this is dangerous <p>
- * bad RNG = infinite loop <p>
- * TODO: rewrite this method 
+ *  this is dangerous<p>
+ * 	bad RNG = infinite loop<p>
+ * 	
  */
 	private void spawnFood() {
 		int rx = ran.nextInt(height);
